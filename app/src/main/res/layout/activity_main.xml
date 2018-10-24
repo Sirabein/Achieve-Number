@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/turns"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Turns:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toStartOf="@+id/number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/turns"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:onClick="clear"
+        android:text="CLEAR"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/target"
+        app:layout_constraintTop_toBottomOf="@+id/multi" />
+
+    <Button
+        android:id="@+id/multi"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:enabled="false"
+        android:onClick="multi"
+        android:text="*2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:enabled="false"
+        android:onClick="add"
+        android:text="+1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/target"
+        app:layout_constraintEnd_toStartOf="@+id/multi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turns" />
+
+    <EditText
+        android:id="@+id/target"
+        android:layout_width="120sp"
+        android:layout_height="70sp"
+        android:ems="10"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:hint="needed number"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/clear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add" />
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="368dp"
+        android:layout_height="182dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="83dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:text="History"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+</android.support.constraint.ConstraintLayout>
